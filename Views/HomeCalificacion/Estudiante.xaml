@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jescobarS3.Views.HomeCalificacion.Estudiante"
+             Title="Estudiante">
+    <StackLayout Padding="20">
+        <Label Text="Sistema de Calificaciones - UISRAEL"
+         FontSize="Large"
+         HorizontalOptions="Center"
+         TextColor="Blue"
+         Margin="0,0,0,20" />
+
+        <!-- Selección de estudiante -->
+        <Label Text="Seleccione Estudiante:"
+         FontSize="Medium"
+         Margin="0,10,0,5" />
+        <Picker x:Name="pickerEstudiante">
+            <Picker.Items>
+                <x:String>Ana López</x:String>
+                <x:String>Juan Pérez</x:String>
+                <x:String>María Torres</x:String>
+                <x:String>Carlos Fernández</x:String>
+                <x:String>Sofía Ramírez</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <!-- Notas Seguimiento y Exámenes del primer parcial -->
+        <Label Text="Primer Parcial"
+         FontSize="Medium"
+         FontAttributes="Bold"
+         Margin="0,15,0,5" />
+        <Entry x:Name="notaSeg1" Placeholder="Nota Seguimiento 1 (0 - 10)"
+         Keyboard="Numeric" Margin="0,0,0,10"/>
+        <Entry x:Name="examen1" Placeholder="Examen 1 (0 - 10)"
+         Keyboard="Numeric" Margin="0,0,0,10"/>
+
+        <!-- Notas Seguimiento y Exámenes del segundo parcial -->
+        <Label Text="Segundo Parcial"
+         FontSize="Medium"
+         FontAttributes="Bold"
+         Margin="0,15,0,5" />
+        <Entry x:Name="notaSeg2" Placeholder="Nota Seguimiento 2 (0 - 10)"
+         Keyboard="Numeric" Margin="0,0,0,10"/>
+        <Entry x:Name="examen2" Placeholder="Examen 2 (0 - 10)"
+         Keyboard="Numeric" Margin="0,0,0,10"/>
+
+        <!-- Selección de fecha -->
+        <Label Text="Fecha" FontSize="Medium" Margin="0,15,0,5"/>
+        <DatePicker x:Name="datePickerFecha" />
+
+        <!-- Botón de cálculo -->
+        <Button Text="Calcular Nota Final"
+          FontAttributes="Bold"
+          BackgroundColor="Blue"
+          TextColor="White"
+          Margin="0,20,0,0"
+          Clicked="OnCalculateClicked"/>
+    </StackLayout>
+</ContentPage>
